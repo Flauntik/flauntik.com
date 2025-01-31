@@ -8,6 +8,7 @@
 
 body {
     line-height: 1.6;
+    color: #333;
 }
 
 .container {
@@ -20,10 +21,16 @@ body {
 nav {
     background: #fff;
     padding: 1rem 0;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
     position: fixed;
     width: 100%;
     z-index: 1000;
+}
+
+nav .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .logo img {
@@ -42,24 +49,54 @@ nav {
     font-weight: 600;
 }
 
+.cta-button {
+    background: #007bff;
+    color: #fff;
+    padding: 0.8rem 1.5rem;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 600;
+}
+
 /* Hero Section */
 .hero {
     background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('assets/hero-bg.jpg');
     background-size: cover;
     background-position: center;
     color: #fff;
-    padding: 150px 0 100px 0;
+    padding: 200px 0 150px 0;
     text-align: center;
 }
 
 .hero h1 {
-    font-size: 3rem;
+    font-size: 3.5rem;
     margin-bottom: 1rem;
 }
 
 .hero p {
     font-size: 1.2rem;
     margin-bottom: 2rem;
+}
+
+.hero .cta-button {
+    background: #ff6b6b;
+}
+
+.scroll-down {
+    margin-top: 2rem;
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-10px);
+    }
+    60% {
+        transform: translateY(-5px);
+    }
 }
 
 /* Features Section */
@@ -71,6 +108,7 @@ nav {
 .features h2 {
     text-align: center;
     margin-bottom: 3rem;
+    font-size: 2.5rem;
 }
 
 .feature-grid {
@@ -85,110 +123,11 @@ nav {
     border-radius: 10px;
     text-align: center;
     box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
 }
 
-.feature-card i {
-    font-size: 2.5rem;
-    color: #007bff;
-    margin-bottom: 1rem;
+.feature-card:hover {
+    transform: translateY(-10px);
 }
 
-/* How It Works Section */
-.how-it-works {
-    padding: 5rem 0;
-}
-
-.steps {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
-    margin-top: 3rem;
-}
-
-.step {
-    text-align: center;
-    padding: 2rem;
-    background: #f9f9f9;
-    border-radius: 10px;
-}
-
-.step span {
-    display: inline-block;
-    width: 40px;
-    height: 40px;
-    background: #007bff;
-    color: #fff;
-    border-radius: 50%;
-    line-height: 40px;
-    margin-bottom: 1rem;
-}
-
-/* Contact Section */
-.contact {
-    padding: 5rem 0;
-    background: #007bff;
-    color: #fff;
-    text-align: center;
-}
-
-.contact h2 {
-    margin-bottom: 2rem;
-}
-
-#contact-form {
-    max-width: 600px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-}
-
-#contact-form input,
-#contact-form textarea {
-    padding: 1rem;
-    border: none;
-    border-radius: 5px;
-}
-
-#contact-form button {
-    padding: 1rem 2rem;
-    border: none;
-    border-radius: 5px;
-    background: #fff;
-    color: #007bff;
-    cursor: pointer;
-}
-
-/* Footer */
-footer {
-    background: #333;
-    color: #fff;
-    padding: 2rem 0;
-    text-align: center;
-}
-
-.social-links {
-    margin-top: 1rem;
-}
-
-.social-links a {
-    color: #fff;
-    margin: 0 1rem;
-    font-size: 1.5rem;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    .feature-grid,
-    .steps {
-        grid-template-columns: 1fr;
-    }
-
-    .nav-links {
-        display: none;
-    }
-
-    .hero h1 {
-        font-size: 2rem;
-    }
-}
+.fe
