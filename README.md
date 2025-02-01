@@ -2,7 +2,7 @@
 ### Dynamic Vehicle Advertising
 #### Flauntik.com | Flauntik.github.io
 
-![Flauntik Logo](assets/logo.png)
+![Flauntik Logo](flauntik_old/assets/logo.png)
 
 **Flauntik** is a cutting-edge digital advertising platform that transforms vehicles into dynamic, data-driven billboards. With Flauntik, brands can deliver targeted, engaging, and memorable advertising experiences to audiences on the move.
 
